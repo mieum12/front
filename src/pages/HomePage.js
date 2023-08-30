@@ -1,5 +1,5 @@
 // import { styled } from "styled-components";
 
 export default function HomePage() {
-  return;
+  return <div>홈페이지</div>;
 }

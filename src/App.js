@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import ProductsRootLayoutPage from "./pages/ProductsRootLayoutPage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
+import AuthPage from "./pages/AuthPage";
+import MyPage from "./pages/MyPage";
 
 const router = createBrowserRouter([
   {
@@ -24,8 +26,8 @@ const router = createBrowserRouter([
             element: <ProductsPage />,
           },
           {
-            path: ":postId",
-            id: "post-detail",
+            path: ":productsId",
+            id: "products-detail",
             children: [
               {
                 index: true,
@@ -34,6 +36,14 @@ const router = createBrowserRouter([
             ],
           },
         ],
+      },
+      {
+        path: "auth",
+        element: <AuthPage />,
+      },
+      {
+        path: "mypage",
+        element: <MyPage />,
       },
     ],
   },
